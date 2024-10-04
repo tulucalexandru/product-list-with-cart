@@ -1,0 +1,50 @@
+@import '../../styles/colors';
+@import '../../styles/typography';
+
+.addToCart {
+    border: 1px solid $rose-400;
+    width: 160px;
+    max-width: 160px;
+    border-radius: 999px;;
+    background-color: $white;
+    padding: 12px;
+    @include text-preset-4-bold;
+
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+
+
+    &:hover {
+        cursor: pointer;
+        border-color: $red;
+        color: $red;
+    }
+}
+
+.addToCartActive {
+    width: 160px;
+    max-width: 160px;
+    border: none;
+    border-radius: 999px;;
+    background-color: $red;
+    padding: 12px;
+    @include text-preset-4-bold;
+    color: $white;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+
+   &  svg:hover circle {
+    fill: $white;
+   } 
+
+   & svg:hover path {
+    fill: $red;
+   }
+
+   & svg:hover {
+    cursor: pointer;
+   }
+}
