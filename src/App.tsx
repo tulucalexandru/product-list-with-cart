@@ -1,12 +1,12 @@
-import './App.css'
-import AddToCart from './components/buttons/AddToCart'
+import "./App.css";
+import AddToCart from "./components/buttons/AddToCart";
 
 function App() {
   return (
     <>
-    <AddToCart></AddToCart>
+      <AddToCart></AddToCart>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
