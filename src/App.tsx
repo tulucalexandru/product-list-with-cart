@@ -1,5 +1,5 @@
 import "./App.css";
-import ProductTitle from "./components/cards/ProductTitle";
+import ProductCard from "./components/cards/ProductCard";
 import productList from './assets/data.json'
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
     <>
       {/* <AddToCart></AddToCart> */}
       {/* <ImageCard /> */}
-      <ProductTitle title={productList[0].name} category={productList[0].category} price={productList[0].price}></ProductTitle>
+      <ProductCard image={productList[0].image} name={productList[0].name} category={productList[0].category} price={productList[0].price} />
     </>
   );
 }
