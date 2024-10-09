@@ -1,4 +1,3 @@
-import ProductImage from "../../assets/images/image-cake-mobile.jpg";
 import styles from "../cards/ImageCard.module.scss";
 
 type ImageProps = {

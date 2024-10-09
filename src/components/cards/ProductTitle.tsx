@@ -3,7 +3,7 @@ import styles from "./ProductTitle.module.scss";
 type TitleProps = {
   title: string;
   category: string;
-  price: number;
+  price: string;
 };
 
 export default function ProductTitle(props: TitleProps) {

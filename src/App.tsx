@@ -7,7 +7,7 @@ function App() {
     <>
       {/* <AddToCart></AddToCart> */}
       {/* <ImageCard /> */}
-      <ProductCard image={productList[0].image} name={productList[0].name} category={productList[0].category} price={productList[0].price} />
+      <ProductCard image={productList[0].image} name={productList[0].name} category={productList[0].category} price={productList[0].price.toString()} />
     </>
   );
 }

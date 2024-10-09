@@ -13,7 +13,7 @@ type ProductCardProps = {
   },
   name: string,
   category: string,
-  price: number,
+  price: string,
 }
 
 const ProductCard = ({ image, name, category, price }: ProductCardProps) => {
@@ -23,7 +23,7 @@ const ProductCard = ({ image, name, category, price }: ProductCardProps) => {
         <ImageCard url={`${image.mobile}`} />
         <AddToCart />
       </div>
-      <ProductTitle title={`${name}`} category={`${category}`} price={price}></ProductTitle>
+      <ProductTitle title={`${name}`} category={`${category}`} price={`${price}`}></ProductTitle>
     </div >
   )
 }
