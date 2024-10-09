@@ -1,14 +1,16 @@
 import "./App.css";
-import AddToCart from "./components/buttons/AddToCart";
-import ImageCard from "./components/cards/ImageCard";
 import ProductTitle from "./components/ProductTitle";
 
-function App() {
+type Props = {
+  name: string;
+}
+
+function App(props: Props) {
   return (
     <>
       {/* <AddToCart></AddToCart> */}
       {/* <ImageCard /> */}
-      <ProductTitle />
+      <ProductTitle title={props.name}></ProductTitle>
     </>
   );
 }
