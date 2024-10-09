@@ -1,14 +1,13 @@
 import "./App.css";
-import AddToCart from "./components/buttons/AddToCart";
-import ImageCard from "./components/cards/ImageCard";
-import ProductTitle from "./components/ProductTitle";
+import ProductCard from "./components/cards/ProductCard";
+import productList from './assets/data.json'
 
 function App() {
   return (
     <>
       {/* <AddToCart></AddToCart> */}
       {/* <ImageCard /> */}
-      <ProductTitle />
+      <ProductCard image={productList[0].image} name={productList[0].name} category={productList[0].category} price={productList[0].price.toString()} />
     </>
   );
 }
