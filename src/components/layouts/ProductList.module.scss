@@ -1,0 +1,17 @@
+@import "../../styles/_colors.scss";
+@import "../../styles/_typography.scss";
+
+
+.productList {
+  display: flex;
+  flex-direction: column;
+  background-color: $rose-50;
+  // padding: 24px;
+  gap: 24px;
+  align-items: center;
+
+  & > h1 {
+    @include text-preset-1;
+    margin-bottom: 8px;
+  }
+}
