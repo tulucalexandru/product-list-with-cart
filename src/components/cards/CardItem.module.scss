@@ -1,0 +1,53 @@
+@import '../../styles/colors';
+@import '../../styles/typography';
+
+.cartItem {
+  display: flex;
+  justify-content: space-between;
+
+
+  & button {
+    border: none;
+    padding: 0;
+    background: none;
+    cursor: pointer;
+    border-radius: 50%;
+    align-self: center;
+  }
+   & svg:hover path {
+     fill: $rose-900;
+   }
+}
+
+.cartItemContent {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  & > h1 {
+    @include text-preset-4-bold;
+    color: $rose-900;
+  }
+}
+
+.cartItemInfo {
+  display: flex;
+  gap: 8px;
+}
+
+
+.cartItemQty {
+  @include text-preset-4-bold;
+  color: $red;
+}
+ 
+
+.cartItemPrice {
+  @include text-preset-4;
+  color: $rose-500;
+}
+
+.cartItemTotalPrice {
+  @include text-preset-4-bold;
+  color: $rose-500;
+}
