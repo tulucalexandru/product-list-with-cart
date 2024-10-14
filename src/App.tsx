@@ -6,7 +6,7 @@ function App() {
     <>
       {/* <AddToCart></AddToCart> */}
       {/* <ImageCard /> */}
-      <ProductList />
+      {true && <ProductList />}
     </>
   )
     ;

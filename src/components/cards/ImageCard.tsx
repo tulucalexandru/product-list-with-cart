@@ -5,7 +5,7 @@ type ImageProps = {
 }
 
 function ImageCard({ url }: ImageProps) {
-  return <img src={`./src/${url}`} alt="image" className={styles.ImageCard} />;
+  return <img src={`${url}`} alt="image" className={styles.ImageCard} />;
 }
 
 export default ImageCard;
