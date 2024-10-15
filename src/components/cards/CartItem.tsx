@@ -1,22 +1,32 @@
 import styles from './CardItem.module.scss'
 
-const CartItem = () => {
+type CartItemContentProps = {
+  cartItem: {
+    name: string,
+    price: string,
+    totalPrice: string,
+    quantity: string
+  }
+
+}
+
+const CartItem = ({ cartItem }: CartItemContentProps) => {
   return (
     <div className={styles.cartItem}>
-      <CartItemContent />
+      <CartItemContent cartItem={cartItem} />
       <DeleteCartItem />
     </div>
   )
 }
 
-const CartItemContent = () => {
+const CartItemContent = ({ cartItem }: CartItemContentProps) => {
   return (
     <div className={styles.cartItemContent}>
-      <h1>Classic Tiramisu</h1>
+      <h1>{cartItem.name}</h1>
       <div className={styles.cartItemInfo}>
-        <h2 className={styles.cartItemQty}>1x</h2>
-        <h2 className={styles.cartItemPrice}>@ $5.50</h2>
-        <h2 className={styles.cartItemTotalPrice}>$5.50</h2>
+        <h2 className={styles.cartItemQty}>{cartItem.quantity}x</h2>
+        <h2 className={styles.cartItemPrice}>@ ${cartItem.price}</h2>
+        <h2 className={styles.cartItemTotalPrice}>${cartItem.totalPrice}</h2>
       </div>
     </div>
   )
