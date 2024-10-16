@@ -1,0 +1,15 @@
+@import "../../styles/colors";
+@import "../../styles/typography";
+
+.cart {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  background-color: $white;
+}
+
+
+.separator {
+  height: 1px;
+  background-color: $rose-100;
+}

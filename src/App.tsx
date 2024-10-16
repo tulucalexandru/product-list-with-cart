@@ -1,6 +1,6 @@
 import "./App.css";
-// import ProductList from "./components/layouts/ProductList";
-import CartItem from "./components/cards/CartItem";
+import ProductList from "./components/layouts/ProductList";
+import Cart from "./components/layouts/Cart";
 
 type cartListItem = {
   name: string,
@@ -9,24 +9,32 @@ type cartListItem = {
   quantity: string
 }
 
-type cartList = cartListItem[]
-
-const cartList = [
+const cartList: cartListItem[] = [
   {
     "name": "Waffle",
     "price": "6.50",
     "totalPrice": "13.00",
     "quantity": "2"
-  }
+  },
+  {
+    "name": "Waffle",
+    "price": "6.50",
+    "totalPrice": "13.00",
+    "quantity": "2"
+  },
+  {
+    "name": "Waffle",
+    "price": "6.50",
+    "totalPrice": "13.00",
+    "quantity": "2"
+  },
 ]
 
 function App() {
   return (
     <>
-      {/* <AddToCart></AddToCart> */}
-      {/* <ImageCard /> */}
-      {/* <ProductList /> */}
-      <CartItem cartItem={cartList[0]} />
+      <ProductList />
+      <Cart cartList={cartList} />
     </>
   )
     ;
