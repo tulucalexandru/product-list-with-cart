@@ -1,23 +1,17 @@
-import CartItem from "../cards/CartItem";
+import { useContext } from "react"
 import styles from "./Cart.module.scss"
+import { CartContext } from "../../context/CartContext"
+import CartItem from "../cards/CartItem"
 
 
-type cartListItem = {
-  name: string,
-  price: string,
-  totalPrice: string,
-  quantity: string
-}
-
-type cartListProps = {
-  cartList: cartListItem[]
-}
 
 
-const Cart = (props: cartListProps) => {
+const Cart = () => {
+  const cartList = useContext(CartContext)
+
   return (
     <div className={styles.cart}>
-      {props.cartList.length !== 0 && props.cartList.map((item, index) =>
+      {cartList.length !== 0 && cartList.map((item, index) =>
         <div key={index}>
           <CartItem cartItem={item} ></CartItem>
           <Separator />

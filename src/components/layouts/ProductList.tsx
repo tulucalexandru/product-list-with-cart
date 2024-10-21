@@ -4,6 +4,7 @@ import productList from "../../assets/data.json"
 
 
 const ProductList = () => {
+
   return (
     <div className={styles.productList}>
       <h1>Desserts</h1>

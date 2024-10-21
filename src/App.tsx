@@ -1,40 +1,20 @@
 import "./App.css";
 import ProductList from "./components/layouts/ProductList";
 import Cart from "./components/layouts/Cart";
+import { CartProvider } from "./context/CartContext";
+import ProductProvider from "./context/ProductListContext";
 
-type cartListItem = {
-  name: string,
-  price: string,
-  totalPrice: string,
-  quantity: string
-}
 
-const cartList: cartListItem[] = [
-  {
-    "name": "Waffle",
-    "price": "6.50",
-    "totalPrice": "13.00",
-    "quantity": "2"
-  },
-  {
-    "name": "Waffle",
-    "price": "6.50",
-    "totalPrice": "13.00",
-    "quantity": "2"
-  },
-  {
-    "name": "Waffle",
-    "price": "6.50",
-    "totalPrice": "13.00",
-    "quantity": "2"
-  },
-]
 
 function App() {
   return (
     <>
-      <ProductList />
-      <Cart cartList={cartList} />
+      <CartProvider>
+        <ProductProvider>
+          <ProductList />
+        </ProductProvider>
+        <Cart />
+      </CartProvider>
     </>
   )
     ;

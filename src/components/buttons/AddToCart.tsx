@@ -1,14 +1,35 @@
 import CartLogo from "../../assets/images/icon-add-to-cart.svg";
 import styles from "./AddToCart.module.scss";
+import { DispatchCartContext } from "../../context/CartContext";
+import { useContext } from "react";
+import { ProductContext } from "../../context/ProductListContext";
 
-const AddToCart = () => {
-  const isActive = false;
-  return isActive ? <AddToCartActive /> : <AddToCartNotActive />;
+type AddToCartProps = {
+  quantity: string,
+  name: string,
 };
 
-const AddToCartNotActive = () => {
+const AddToCart = (props: AddToCartProps) => {
+  return parseInt(props.quantity) >= 1 ? <AddToCartActive /> : <AddToCartNotActive {...props} />;
+};
+
+const AddToCartNotActive = (props: AddToCartProps) => {
+  const itemList = useContext(ProductContext)
+  const item = itemList.filter((item) => item.name === props.name)[0]
+
+  const dispatch = useContext(DispatchCartContext)
+
+
   return (
-    <button className={styles.addToCart}>
+    <button className={styles.addToCart} onClick={() => {
+      dispatch({
+        type: "ADD_ITEM",
+        name: props.name,
+        price: item.price,
+        totalPrice: (parseFloat(item.price).toFixed(2)).toString(),
+        quantity: "1"
+      })
+    }}>
       <img src={CartLogo} alt="CartLogo" />
       Add to Cart
     </button>
