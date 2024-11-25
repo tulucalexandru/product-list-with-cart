@@ -5,6 +5,17 @@ import styles from './ProductCard.module.scss'
 import { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
 
+type ProductCardProps = {
+  image: {
+    thumbnail: string,
+    mobile: string,
+    tablet: string,
+    desktop: string
+  },
+  name: string,
+  category: string,
+  price: string
+}
 
 const ProductCard = ({ image, name, category, price }: ProductCardProps) => {
   const cartState = useContext(CartContext)
