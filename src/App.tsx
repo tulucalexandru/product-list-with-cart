@@ -1,15 +1,20 @@
-import "./App.css";
 import ProductList from "./components/layouts/ProductList";
-// import CartItem from "./components/cards/CartItem";
+import Cart from "./components/layouts/Cart";
+import { CartProvider } from "./context/CartContext";
+import ProductProvider from "./context/ProductListContext";
+import styles from "./App.module.scss"
+
 
 function App() {
   return (
-    <>
-      {/* <AddToCart></AddToCart> */}
-      {/* <ImageCard /> */}
-      <ProductList />
-      {/* <CartItem /> */}
-    </>
+    <div className={styles.app}>
+      <CartProvider>
+        <ProductProvider>
+          <ProductList />
+        </ProductProvider>
+        <Cart />
+      </CartProvider>
+    </div>
   )
     ;
 }

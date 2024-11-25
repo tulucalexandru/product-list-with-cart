@@ -1,6 +1,6 @@
 @import './colors';
-@mixin text-preset-1 {
-    color: $rose-900;
+@mixin text-preset-1($color: $rose-900) {
+    color: $color;
     /* text-preset-1 */
     font-family: "Red Hat Text";
     font-size:  40px;
@@ -9,8 +9,8 @@
     line-height: 120%; /* 48px */
 }
 
-@mixin text-preset-2 {
-    color: $red;
+@mixin text-preset-2($color: $red) {
+    color: $color;
     /* text-preset-2 */
     font-family: "Red Hat Text";
     font-size:  24px;
@@ -19,8 +19,8 @@
     line-height: 120%; /* 48px */
 }
 
-@mixin text-preset-3 {
-    color: $rose-900;
+@mixin text-preset-3($color: $rose-900) {
+    color: $color;
     /* text-preset-3 */
     font-family: "Red Hat Text";
     font-size: 16px;
@@ -30,8 +30,8 @@
 }
 
 
-@mixin text-preset-3-red {
-    color: $red;
+@mixin text-preset-3-red($color: $red) {
+    color: $color;
     /* text-preset-3 */
     font-family: "Red Hat Text";
     font-size: 16px;
@@ -41,23 +41,24 @@
 }
 
 
-@mixin text-preset-4 {
-    color: #87635A;
+@mixin text-preset-4($color:$rose-900, $fontWeight: 400) {
+    color: $color;
     /* text-preset-4 */
     font-family: "Red Hat Text";
     font-size: 14px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: $fontWeight;
     line-height: normal;
 }
 
 @mixin text-preset-4-bold {
-    color: $rose-900;
-
-    /* text-preset-4-bold */
-    font-family: "Red Hat Text";
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
+  @include text-preset-4(null, 600);
+    // color: $rose-900;
+    //
+    // /* text-preset-4-bold */
+    // font-family: "Red Hat Text";
+    // font-size: 14px;
+    // font-style: normal;
+    // font-weight: 600;
+    // line-height: normal;
 }

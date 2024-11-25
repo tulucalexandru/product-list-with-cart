@@ -1,16 +1,31 @@
 @import '../../styles/_colors.scss';
 @import '../../styles/_typography.scss';
+@import '../../styles/utils';
 
 .ProductCard {
   display: flex;
   flex-direction: column;
+  flex-shrink: 1;
   gap: 16px;
   max-width: 327px;
 
-  & button {
+  & > div > button {
     position: relative;
     margin-top: -23px;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  & > div > div  {
+    position: relative;
+    margin-top: -23px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (min-width: $mobileWidth) {
+  .ProductCard {
+    max-width: 213;
   }
 }
