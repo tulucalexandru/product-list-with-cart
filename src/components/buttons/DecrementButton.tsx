@@ -1,14 +1,12 @@
-import Button from "./Button"
+import { Button } from "./Button"
 import { DecrementLogo } from "../svg"
-import { IButtonProps } from "../../@types"
+import { IExtButtonProps } from "../../@types"
 
 
-const DecrementButton = (props: IButtonProps) => {
+export const DecrementButton = (props: IExtButtonProps) => {
   return (
     <Button {...props}>
       <DecrementLogo></DecrementLogo>
     </Button>
   )
 }
-
-export default DecrementButton

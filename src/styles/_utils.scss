@@ -1,0 +1,10 @@
+@mixin flexify($direction:row, $gap:8px, $wrap: nowrap) {
+  display: flex;
+  flex-direction: $direction;
+  gap: $gap;
+}
+
+// media queries
+$mobileWidth: 376px;
+$tabletWidth: 769px;
+$desktopWIdth: 1440px;

@@ -1,15 +1,25 @@
 import styles from "./AddToCart.module.scss";
-import DecrementButton from "./DecrementButton";
-import IncrementButton from "./IncrementButton";
-import { IButtonProps } from "../../@types";
+import { IExtButtonProps } from "../../@types";
+import { DecrementButton } from "./";
+import { IncrementButton } from "./IncrementButton";
+import { useContext } from "react";
+import { DispatchCartContext } from "../../context/CartContext";
 
 
-const AddToCartActive = (props: IButtonProps) => {
+export const AddToCartActive = (props: IExtButtonProps) => {
+  const dispatch = useContext(DispatchCartContext)
+
   return (
     <div className={styles.addToCartActive}>
-      <DecrementButton {...props}></DecrementButton><p>{props.quantity}</p><IncrementButton {...props}></IncrementButton>
+      <DecrementButton {...props} onClick={() => dispatch({
+        type: "DECREMENT_ITEM",
+        name: props.name
+      })}></DecrementButton>
+      <p>{props.quantity}</p>
+      <IncrementButton {...props} onClick={() => dispatch({
+        type: "INCREMENT_ITEM",
+        name: props.name
+      })}></IncrementButton>
     </div>
   );
 };
-
-export default AddToCartActive

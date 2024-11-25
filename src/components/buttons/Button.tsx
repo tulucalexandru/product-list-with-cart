@@ -1,9 +1,7 @@
+import { IExtButtonProps, IButtonProps } from "../../@types"
 
-
-const Button = (props: IButtonProps) => {
+export const Button = (props: IButtonProps | IExtButtonProps) => {
   return (
     <button {...props}>{props.children}</button>
   )
 }
-
-export default Button

@@ -1,0 +1,14 @@
+@import "../../styles/colors";
+@import "../../styles/typography";
+
+
+.confirmOrder {
+  border: none;
+  cursor: pointer;
+  background-color: $red;
+  @include text-preset-3;
+  color: white;
+  padding: 16px 24px;
+  border-radius: 999px;
+}
+

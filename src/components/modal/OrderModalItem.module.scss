@@ -1,0 +1,52 @@
+@import "../../styles/colors";
+@import "../../styles/utils";
+@import "../../styles/typography";
+
+.cartItem {
+  & > div {
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
+
+.cartItemContent {
+  @include flexify(column, 8px, nowrap);
+  margin-right: auto;
+
+
+  & h1 {
+    @include text-preset-4($rose-900, 600);
+    display: block;
+    white-space: nowrap;
+    width: 153px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  & .quantity {
+    @include text-preset-4($red, null) 
+  }
+   & .itemPrice {
+     @include text-preset-4($rose-500, 400);
+   }
+}
+
+.cartItemInfo {
+  @include flexify(row, 8px, nowrap);
+  align-self: stretch;
+  width: 100%;
+}
+
+.totalPrice {
+  @include text-preset-3($rose-900);
+  align-self: center;
+}
+
+// @media (min-width: $mobileWidth) {
+//   .cartItemContent {
+//     & h1 {
+//       width: 100%;
+//     }
+//   }
+// }

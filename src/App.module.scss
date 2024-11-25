@@ -1,0 +1,28 @@
+@import "./styles/_colors.scss";
+@import "./styles/_typography.scss";
+@import "./styles/utils.scss";
+
+
+
+.app {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: center;
+  padding: 24px;
+  background-color: $rose-50;
+}
+
+
+@media (min-width: $mobileWidth) {
+  .app {
+    padding: 40px;
+  }
+}
+
+@media (min-width: $tabletWidth) {
+  .app {
+    flex-direction: row;
+    padding: 88px 40px 88px 40px;
+  }
+}

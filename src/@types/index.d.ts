@@ -1,8 +1,7 @@
 export interface IButtonProps extends React.ComponentPropsWithoutRef<"button"> {
-  name: string,
-  quantity: string
 }
 
-export interface ISVGProps extends React.ComponentPropsWithoutRef<"svg"> {
-
+export interface IExtButtonProps extends IButtonProps {
+  name: string,
+  quantity: string
 }

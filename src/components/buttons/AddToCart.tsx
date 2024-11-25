@@ -1,11 +1,10 @@
-import AddToCartNotActive from "./AddToCartNotActive";
-import AddToCartActive from "./AddToCartActive";
-import { IButtonProps } from "../../@types";
+import { IExtButtonProps as IExtButtonProps } from "../../@types";
+import { AddToCartNotActive } from "./AddToCartNotActive";
+import { AddToCartActive } from "./AddToCartActive";
 
-const AddToCart = (props: IButtonProps) => {
+export const AddToCart = (props: IExtButtonProps) => {
   return parseInt(props.quantity) >= 1 ? <AddToCartActive {...props}></AddToCartActive> : <AddToCartNotActive {...props} />;
 };
 
 
 
-export default AddToCart;

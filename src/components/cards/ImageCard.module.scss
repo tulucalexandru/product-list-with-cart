@@ -1,7 +1,23 @@
 @import "../../styles/_colors.scss";
+@import "../../styles/utils.scss";
 
 .ImageCard {
   border-radius: 8px;
   width: 319px;
   height: 212px;
 }
+
+@media (min-width: $mobileWidth) {
+  .ImageCard {
+    width: 213px;
+    height: 212px;
+  }
+}
+
+@media (min-width: $tabletWidth) {
+  .ImageCard {
+    width: 250px;
+    height: 240px;
+  }
+}
+

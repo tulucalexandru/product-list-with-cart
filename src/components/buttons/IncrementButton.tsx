@@ -1,8 +1,9 @@
 import { IncrementLogo } from '../svg'
-import Button from './Button'
-import { IButtonProps } from '../../@types'
+import { Button } from './Button'
+import { IExtButtonProps } from '../../@types'
 
-const IncrementButton = (props: IButtonProps) => {
+export const IncrementButton = (props: IExtButtonProps) => {
+  console.log(props.name)
   return (
     <Button {...props}>
       <IncrementLogo>
@@ -10,5 +11,3 @@ const IncrementButton = (props: IButtonProps) => {
     </Button>
   )
 }
-
-export default IncrementButton

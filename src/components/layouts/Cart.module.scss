@@ -5,11 +5,82 @@
   display: flex;
   flex-direction: column;
   align-items: stretch;
+  gap: 24px;
+  border-radius: 12px;
   background-color: $white;
+  width: 100%;
+  padding: 24px;
+
+  & h1 {
+    @include text-preset-2;
+  }
+  & h2 {
+    @include text-preset-4;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;;
+  }
+}
+
+.orderTotal {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+   & h1 {
+     color: blackl
+   }
+   & h2 {
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal; 
+   }
+}
+
+.carbonNeutral {
+  display: flex;
+  flex-direction: row;
+  padding: 16px;
+  border-radius: 8px;
+  gap: 24px;
+  background-color: $rose-50;
+  justify-content: center;
+  align-items: center;
+
+  & h2 {
+    @include text-preset-4;
+    color: black;
+    & strong {
+      font-weight: 600;
+    }
+  }
+  & > div {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+    justify-self: center;
+  }
+}
+
+.emptyCart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 0;
 }
 
 
 .separator {
   height: 1px;
   background-color: $rose-100;
+}
+
+
+@media (min-width: 768px) {
+  .cart {
+    align-self: start;
+    min-width: 384px;
+  }
 }
