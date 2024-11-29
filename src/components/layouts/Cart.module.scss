@@ -78,9 +78,10 @@
 }
 
 
-@media (min-width: 768px) {
+@media (min-width: 1200px) {
   .cart {
     align-self: start;
+    width: 384px;
     min-width: 384px;
   }
 }
