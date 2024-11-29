@@ -7,12 +7,12 @@
   display: flex;
   flex-direction: column;
   background-color: $rose-50;
-  gap: 24px;
-  align-items: center;
+  gap: 32px;
 
-  & > h1 {
+  & .productListTitle {
     @include text-preset-1;
     margin-bottom: 8px;
+    align-self: flex-start;
   }
 }
 
@@ -20,7 +20,12 @@
   .productList > div {
     flex-direction: row !important;
     flex-wrap: wrap !important; 
-    justify-content: center; 
     row-gap: 32px !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .productList {
+    width: 800px;
   }
 }
